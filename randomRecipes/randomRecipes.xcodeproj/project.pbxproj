@@ -13,6 +13,7 @@
 		BF734EA71F8BDC53004B8295 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF734EA61F8BDC53004B8295 /* Assets.xcassets */; };
 		BF734EAA1F8BDC53004B8295 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF734EA81F8BDC53004B8295 /* LaunchScreen.storyboard */; };
 		BF734EB41F8BE4BE004B8295 /* RecipesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF734EB31F8BE4BE004B8295 /* RecipesTableViewCell.swift */; };
+		BF734EB61F8C1220004B8295 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF734EB51F8C1220004B8295 /* Recipe.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		BF734EA91F8BDC53004B8295 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BF734EAB1F8BDC53004B8295 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF734EB31F8BE4BE004B8295 /* RecipesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesTableViewCell.swift; sourceTree = "<group>"; };
+		BF734EB51F8C1220004B8295 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				BF734EA81F8BDC53004B8295 /* LaunchScreen.storyboard */,
 				BF734EAB1F8BDC53004B8295 /* Info.plist */,
 				BF734EB31F8BE4BE004B8295 /* RecipesTableViewCell.swift */,
+				BF734EB51F8C1220004B8295 /* Recipe.swift */,
 			);
 			path = randomRecipes;
 			sourceTree = "<group>";
@@ -142,6 +145,7 @@
 				BF734EA21F8BDC53004B8295 /* RecipesVC.swift in Sources */,
 				BF734EA01F8BDC53004B8295 /* AppDelegate.swift in Sources */,
 				BF734EB41F8BE4BE004B8295 /* RecipesTableViewCell.swift in Sources */,
+				BF734EB61F8C1220004B8295 /* Recipe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

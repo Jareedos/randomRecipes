@@ -9,6 +9,8 @@
 import UIKit
 
 class RecipesVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    //Look up NSCoding Swift
    
     
     @IBOutlet weak var tableView: UITableView!
