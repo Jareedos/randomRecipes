@@ -14,6 +14,8 @@
 		BF734EAA1F8BDC53004B8295 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF734EA81F8BDC53004B8295 /* LaunchScreen.storyboard */; };
 		BF734EB41F8BE4BE004B8295 /* RecipesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF734EB31F8BE4BE004B8295 /* RecipesTableViewCell.swift */; };
 		BF734EB61F8C1220004B8295 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF734EB51F8C1220004B8295 /* Recipe.swift */; };
+		BF734EB81F8C1F48004B8295 /* ApiCaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF734EB71F8C1F48004B8295 /* ApiCaller.swift */; };
+		BF734EBA1F8C2784004B8295 /* ApiKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF734EB91F8C2784004B8295 /* ApiKey.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		BF734EAB1F8BDC53004B8295 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF734EB31F8BE4BE004B8295 /* RecipesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesTableViewCell.swift; sourceTree = "<group>"; };
 		BF734EB51F8C1220004B8295 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		BF734EB71F8C1F48004B8295 /* ApiCaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiCaller.swift; sourceTree = "<group>"; };
+		BF734EB91F8C2784004B8295 /* ApiKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiKey.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +46,7 @@
 		BF734E931F8BDC53004B8295 = {
 			isa = PBXGroup;
 			children = (
+				BF734EB91F8C2784004B8295 /* ApiKey.swift */,
 				BF734E9E1F8BDC53004B8295 /* randomRecipes */,
 				BF734E9D1F8BDC53004B8295 /* Products */,
 			);
@@ -66,6 +71,7 @@
 				BF734EAB1F8BDC53004B8295 /* Info.plist */,
 				BF734EB31F8BE4BE004B8295 /* RecipesTableViewCell.swift */,
 				BF734EB51F8C1220004B8295 /* Recipe.swift */,
+				BF734EB71F8C1F48004B8295 /* ApiCaller.swift */,
 			);
 			path = randomRecipes;
 			sourceTree = "<group>";
@@ -146,6 +152,8 @@
 				BF734EA01F8BDC53004B8295 /* AppDelegate.swift in Sources */,
 				BF734EB41F8BE4BE004B8295 /* RecipesTableViewCell.swift in Sources */,
 				BF734EB61F8C1220004B8295 /* Recipe.swift in Sources */,
+				BF734EBA1F8C2784004B8295 /* ApiKey.swift in Sources */,
+				BF734EB81F8C1F48004B8295 /* ApiCaller.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

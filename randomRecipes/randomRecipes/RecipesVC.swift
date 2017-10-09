@@ -19,6 +19,7 @@ class RecipesVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        ApiCaller.callApi()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
