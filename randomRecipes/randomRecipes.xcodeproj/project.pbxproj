@@ -16,6 +16,7 @@
 		BF734EB61F8C1220004B8295 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF734EB51F8C1220004B8295 /* Recipe.swift */; };
 		BF734EB81F8C1F48004B8295 /* ApiCaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF734EB71F8C1F48004B8295 /* ApiCaller.swift */; };
 		BF734EBA1F8C2784004B8295 /* ApiKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF734EB91F8C2784004B8295 /* ApiKey.swift */; };
+		BF734EBC1F8C679E004B8295 /* FillerProtocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF734EBB1F8C679E004B8295 /* FillerProtocal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		BF734EB51F8C1220004B8295 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		BF734EB71F8C1F48004B8295 /* ApiCaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiCaller.swift; sourceTree = "<group>"; };
 		BF734EB91F8C2784004B8295 /* ApiKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiKey.swift; sourceTree = "<group>"; };
+		BF734EBB1F8C679E004B8295 /* FillerProtocal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FillerProtocal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +48,7 @@
 		BF734E931F8BDC53004B8295 = {
 			isa = PBXGroup;
 			children = (
+				BF734EBB1F8C679E004B8295 /* FillerProtocal.swift */,
 				BF734EB91F8C2784004B8295 /* ApiKey.swift */,
 				BF734E9E1F8BDC53004B8295 /* randomRecipes */,
 				BF734E9D1F8BDC53004B8295 /* Products */,
@@ -65,13 +68,13 @@
 			children = (
 				BF734E9F1F8BDC53004B8295 /* AppDelegate.swift */,
 				BF734EA11F8BDC53004B8295 /* RecipesVC.swift */,
+				BF734EB71F8C1F48004B8295 /* ApiCaller.swift */,
 				BF734EA31F8BDC53004B8295 /* Main.storyboard */,
 				BF734EA61F8BDC53004B8295 /* Assets.xcassets */,
 				BF734EA81F8BDC53004B8295 /* LaunchScreen.storyboard */,
 				BF734EAB1F8BDC53004B8295 /* Info.plist */,
 				BF734EB31F8BE4BE004B8295 /* RecipesTableViewCell.swift */,
 				BF734EB51F8C1220004B8295 /* Recipe.swift */,
-				BF734EB71F8C1F48004B8295 /* ApiCaller.swift */,
 			);
 			path = randomRecipes;
 			sourceTree = "<group>";
@@ -152,6 +155,7 @@
 				BF734EA01F8BDC53004B8295 /* AppDelegate.swift in Sources */,
 				BF734EB41F8BE4BE004B8295 /* RecipesTableViewCell.swift in Sources */,
 				BF734EB61F8C1220004B8295 /* Recipe.swift in Sources */,
+				BF734EBC1F8C679E004B8295 /* FillerProtocal.swift in Sources */,
 				BF734EBA1F8C2784004B8295 /* ApiKey.swift in Sources */,
 				BF734EB81F8C1F48004B8295 /* ApiCaller.swift in Sources */,
 			);
