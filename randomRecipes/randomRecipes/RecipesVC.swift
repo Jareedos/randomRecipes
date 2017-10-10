@@ -44,17 +44,17 @@ class RecipesVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         }
         cell.foodTitle.text = recipesArray[indexPath.row]._recipeTitle
         cell.foodType.text = recipesArray[indexPath.row]._recipeType
-//        cell.foodImg.image = recipesArray[indexPath.row]._recipeImage
+        let recipeImageURL = URL(string: String(recipesArray[indexPath.row]._recipeImage))
+        let recipePictureData = NSData(contentsOf: recipeImageURL!)
+        let recipePicture = UIImage(data: recipePictureData! as Data) ?? #imageLiteral(resourceName: "foodApiTester")
+        cell.foodImg.image = recipePicture
         return cell
     }
 
    
     func fillRecipeArray(){
-        print("VIctory")
         for _ in 1...20 {
             calledApi.fillRecipeArray(completion:{ (Recipe) in
-                print("I got here")
-                print(Recipe)
                 self.recipesArray.append(Recipe)
                 DispatchQueue.main.async(){
                 self.tableView.reloadData()
