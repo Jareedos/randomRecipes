@@ -11,5 +11,5 @@ import Foundation
 protocol fillerProtocal {
     
 //    func completion(result: Recipe) -> Void
-    func fillRecipeArray(completion: @escaping (Recipe) -> Void)
+    func getRecipe(completion: @escaping (Recipe) -> Void)
 }

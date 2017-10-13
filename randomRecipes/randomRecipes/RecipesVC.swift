@@ -22,7 +22,7 @@ class RecipesVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        fillRecipeArray()
+        getRecipe()
     }
 
     override func didReceiveMemoryWarning() {
@@ -52,9 +52,9 @@ class RecipesVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
 
    
-    func fillRecipeArray(){
+    func getRecipe(){
         for _ in 1...20 {
-            calledApi.fillRecipeArray(completion:{ (Recipe) in
+            calledApi.getRecipe(completion:{ (Recipe) in
                 self.recipesArray.append(Recipe)
                 DispatchQueue.main.async(){
                 self.tableView.reloadData()
@@ -63,9 +63,7 @@ class RecipesVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         }
     }
     
-   
-    
-
+ 
 
 }
 

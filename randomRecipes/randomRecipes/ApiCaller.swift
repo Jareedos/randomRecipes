@@ -10,7 +10,7 @@ import Foundation
 
 class ApiCaller : fillerProtocal {
     
-    func fillRecipeArray(completion: @escaping (Recipe) -> Void){
+    func getRecipe(completion: @escaping (Recipe) -> Void){
         let urlString = apiCall
         if let url = URL(string: urlString) {
             URLSession.shared.dataTask(with: url) {data,respone,error in
@@ -43,10 +43,6 @@ class ApiCaller : fillerProtocal {
             }.resume()
         }
     }
-    
-    
-//    func fillRecipeArray() -> Recipe{
-//        let returnedReceipe = ApiCaller.callApi()
-//        return returnedReceipe
-//    }
 }
+    
+

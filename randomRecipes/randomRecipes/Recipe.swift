@@ -9,12 +9,15 @@
 import Foundation
 
 class Recipe {
-    let _recipeTitle: String
+    var _recipeTitle: String
     let _recipeType: String
     let _recipeOrigin: String
     let _recipeImage: String
     let _recipeInstructions: String
     var _ingredients: [(String,String)] = [] // creating an array of tuples for the ingredients and it's measurements
+    
+    
+  
     
     init(recipeTitle: String, recipeType: String, recipeOrigin: String, recipeImage: String, recipeInstructions: String){
         _recipeTitle = recipeTitle
@@ -23,5 +26,8 @@ class Recipe {
         _recipeImage = recipeImage
         _recipeInstructions = recipeInstructions
     }
+    
+    
+
     
 }
