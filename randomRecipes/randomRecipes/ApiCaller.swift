@@ -33,7 +33,10 @@ class ApiCaller : fillerProtocal {
                             }
                         }
                         let newRecipe = Recipe(recipeTitle: recipeTitle as! String, recipeType: recipeType as! String, recipeOrigin: recipeOrigin as! String, recipeImage: recipeImage as! String, recipeInstructions: recipeInstructions as! String)
-                        newRecipe._ingredients.append(contentsOf: tupleArray)
+                        for tuple in tupleArray {
+                            newRecipe._ingredientsArray.append(tuple.0)
+                            newRecipe._ingredientMeasurementsArray.append(tuple.1)
+                        }
                         completion(newRecipe)
                     } catch {
                         fatalError("Sorry")

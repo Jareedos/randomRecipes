@@ -14,10 +14,10 @@ class Recipe {
     let _recipeOrigin: String
     let _recipeImage: String
     let _recipeInstructions: String
-    var _ingredients: [(String,String)] = [] // creating an array of tuples for the ingredients and it's measurements
-    
-    
-  
+    var _ingredientsArray: [String] = []
+    var _ingredientMeasurementsArray: [String] = []
+    // creating an array of tuples for the ingredients and it's measurements
+    // created two arrays to conform with coreData
     
     init(recipeTitle: String, recipeType: String, recipeOrigin: String, recipeImage: String, recipeInstructions: String){
         _recipeTitle = recipeTitle
