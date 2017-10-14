@@ -5,6 +5,7 @@ import CoreData
 class LoadingVC: UIViewController {
     var delegate: fillerProtocal?
     var calledApi = ApiCaller()
+    var fetchData = [NSManagedObject]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -12,6 +13,7 @@ class LoadingVC: UIViewController {
     }
 
     override func viewDidAppear(_ animated: Bool) {
+        deleteRecipes()
         getRecipe()
 
     }
@@ -19,9 +21,10 @@ class LoadingVC: UIViewController {
         print("Got Here")
         let dispatchGroup = DispatchGroup()
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        print(appDelegate, #line, #function)
+//        print(appDelegate, #line, #function)
         let context = appDelegate.persistentContainer.viewContext
-        print(context, #line, #function, Date())
+//        print(context, #line, #function, Date())
+//        deleteRecipes()
         for _ in 1...20 {
             dispatchGroup.enter()
             calledApi.getRecipe(completion: {
@@ -55,5 +58,34 @@ class LoadingVC: UIViewController {
 //            print("Both functions complete 👍")
          self.performSegue(withIdentifier: "loadingSegue" , sender: nil)
         }
+    }
+    
+    func deleteRecipes() -> Void {
+        let moc = getContext()
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Recipes")
+        
+        let result = try? moc.fetch(fetchRequest)
+        let resultData = result as! [NSManagedObject]
+        
+        for object in resultData {
+            moc.delete(object)
+        }
+        
+        do {
+            try moc.save()
+            print("saved!")
+        } catch let error as NSError  {
+            print("Could not save \(error), \(error.userInfo)")
+        } catch {
+            
+        }
+        
+    }
+    
+    // MARK: Get Context
+    
+    func getContext () -> NSManagedObjectContext {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        return appDelegate.persistentContainer.viewContext
     }
 }
