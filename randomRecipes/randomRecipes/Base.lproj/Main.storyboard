@@ -211,10 +211,10 @@
             </objects>
             <point key="canvasLocation" x="106" y="-734"/>
         </scene>
-        <!--View Controller-->
+        <!--LoadingVC-->
         <scene sceneID="lMc-BE-mhc">
             <objects>
-                <viewController id="4qp-W6-6CD" sceneMemberID="viewController">
+                <viewController id="4qp-W6-6CD" customClass="LoadingVC" customModule="randomRecipes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Hoj-dG-ttj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -267,6 +267,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="A4c-i7-XnZ"/>
                     </view>
+                    <connections>
+                        <segue destination="hzI-Zm-WOv" kind="show" identifier="loadingSegue" id="Nxn-Qz-zP0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jf7-YW-haH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

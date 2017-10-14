@@ -1,16 +1,9 @@
-//
-//  ApiCaller.swift
-//  randomRecipes
-//
-//  Created by Jared Sobol on 10/9/17.
-//  Copyright © 2017 Appmaker. All rights reserved.
-//
 
 import Foundation
 
 class ApiCaller : fillerProtocal {
-    
     func getRecipe(completion: @escaping (Recipe) -> Void){
+        print("HERE")
         let urlString = apiCall
         if let url = URL(string: urlString) {
             URLSession.shared.dataTask(with: url) {data,respone,error in
@@ -24,6 +17,7 @@ class ApiCaller : fillerProtocal {
                         let recipeImage = meals[0]["strMealThumb"]
                         let recipeInstructions = meals[0]["strInstructions"]
                         var tupleArray: [(String, String)] = []
+                        
                         for index in 1...20 {
                             if meals[0]["strIngredient\(index)"] is NSNull {continue}
                             let tuple = (meals[0]["strIngredient\(index)"], meals[0]["strMeasure\(index)"])
@@ -36,6 +30,7 @@ class ApiCaller : fillerProtocal {
                         for tuple in tupleArray {
                             newRecipe._ingredientsArray.append(tuple.0)
                             newRecipe._ingredientMeasurementsArray.append(tuple.1)
+                     
                         }
                         completion(newRecipe)
                     } catch {
