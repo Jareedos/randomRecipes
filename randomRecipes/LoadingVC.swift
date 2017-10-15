@@ -33,7 +33,7 @@ class LoadingVC: UIViewController {
             calledApi.getRecipe(completion: {
                 (Recipe) in
                 print(Recipe)
-//                if copiesArray.contains(Recipe._recipeTitle){continue}
+                if !copiesArray.contains(Recipe._recipeTitle) {
                 copiesArray.append(Recipe._recipeTitle)
                 let entity = NSEntityDescription.entity(forEntityName: "Recipes", in: context)!
                 let newRecipe = NSManagedObject(entity: entity, insertInto: context)
@@ -51,6 +51,7 @@ class LoadingVC: UIViewController {
                 }
                 catch {
                     print("sorry")
+                }
                 }
                 dispatchGroup.leave()
             })

@@ -120,6 +120,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="containerView" destination="Mkt-e0-TOz" id="Vsz-Iz-lkP"/>
                                             <outlet property="foodImg" destination="Sdg-Ay-MkJ" id="WyW-rd-zvq"/>
                                             <outlet property="foodTitle" destination="iGb-2U-SA0" id="1rx-Q3-Ra0"/>
                                         </connections>

@@ -61,6 +61,7 @@ class RecipesVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         if let recipeImage = recipesArray[indexPath.row].value(forKey: "recipeImage") as? Data {
             let image = UIImage(data: recipeImage)
+            // SDWebImage
             cell.foodImg.image = image
         }
 //        cell.foodType.text = recipesArray[indexPath.row]._recipeType
