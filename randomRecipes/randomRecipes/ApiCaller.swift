@@ -2,6 +2,7 @@
 import Foundation
 
 class ApiCaller : fillerProtocal {
+//    var copiesArray = [String]()
     func getRecipe(completion: @escaping (Recipe) -> Void){
         print("HERE")
         let urlString = apiCall
@@ -26,13 +27,18 @@ class ApiCaller : fillerProtocal {
                                 tupleArray.append((tuple.0 as! String,tuple.1 as! String))
                             }
                         }
-                        let newRecipe = Recipe(recipeTitle: recipeTitle as! String, recipeType: recipeType as! String, recipeOrigin: recipeOrigin as! String, recipeImage: recipeImage as! String, recipeInstructions: recipeInstructions as! String)
-                        for tuple in tupleArray {
-                            newRecipe._ingredientsArray.append(tuple.0)
-                            newRecipe._ingredientMeasurementsArray.append(tuple.1)
+//                        if self.copiesArray.contains(recipeTitle as! String) {
+//                             return
+//                            } else {
+//                            self.copiesArray.append(recipeTitle as! String)
+                            let newRecipe = Recipe(recipeTitle: recipeTitle as! String, recipeType: recipeType as! String, recipeOrigin: recipeOrigin as! String, recipeImage:    recipeImage as! String, recipeInstructions: recipeInstructions as! String)
+                            for tuple in tupleArray {
+                                newRecipe._ingredientsArray.append(tuple.0)
+                                newRecipe._ingredientMeasurementsArray.append(tuple.1)
                      
-                        }
+                            }
                         completion(newRecipe)
+                        //}
                     } catch {
                         fatalError("Sorry")
                     }

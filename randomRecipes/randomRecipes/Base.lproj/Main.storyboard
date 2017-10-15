@@ -10,6 +10,7 @@
     </dependencies>
     <customFonts key="customFonts">
         <array key="HoeflerText.ttc">
+            <string>HoeflerText-Black</string>
             <string>HoeflerText-Regular</string>
         </array>
     </customFonts>
@@ -82,52 +83,31 @@
                                                                 <constraint firstAttribute="height" constant="217" id="Rfd-0z-gJR"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5jC-l9-hc6">
-                                                            <rect key="frame" x="0.0" y="167" width="355" height="50"/>
-                                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ZGW-ef-pZG">
-                                                                <rect key="frame" x="0.0" y="0.0" width="355" height="50"/>
-                                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                                <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sQu-xt-elh">
-                                                                        <rect key="frame" x="28" y="12" width="31" height="14.5"/>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xyf-Qr-CnK">
-                                                                        <rect key="frame" x="227" y="12" width="100" height="14.5"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="PBf-X9-BCR"/>
-                                                                        </constraints>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                </subviews>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="sQu-xt-elh" secondAttribute="trailing" constant="20" symbolic="YES" id="8hg-AQ-Kag"/>
-                                                                    <constraint firstItem="sQu-xt-elh" firstAttribute="leading" secondItem="ZGW-ef-pZG" secondAttribute="leading" constant="28" id="E1p-Up-bzo"/>
-                                                                    <constraint firstItem="xyf-Qr-CnK" firstAttribute="top" secondItem="ZGW-ef-pZG" secondAttribute="top" constant="12" id="Yep-ar-mDf"/>
-                                                                    <constraint firstAttribute="trailing" secondItem="xyf-Qr-CnK" secondAttribute="trailing" constant="28" id="eoj-i3-qCd"/>
-                                                                    <constraint firstItem="sQu-xt-elh" firstAttribute="top" secondItem="ZGW-ef-pZG" secondAttribute="top" constant="12" id="tHF-PQ-LTA"/>
-                                                                    <constraint firstItem="xyf-Qr-CnK" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ZGW-ef-pZG" secondAttribute="leading" constant="20" symbolic="YES" id="tu0-Eg-iax"/>
-                                                                </constraints>
-                                                            </view>
+                                                        <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Qe-fN-711">
+                                                            <rect key="frame" x="0.0" y="161" width="355" height="55"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" constant="50" id="qEc-ZG-ZIU"/>
+                                                                <constraint firstAttribute="height" constant="55" id="l9U-1F-p58"/>
                                                             </constraints>
-                                                            <blurEffect style="light"/>
-                                                        </visualEffectView>
+                                                        </view>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iGb-2U-SA0">
+                                                            <rect key="frame" x="151" y="176" width="54.5" height="20"/>
+                                                            <fontDescription key="fontDescription" name="HoeflerText-Black" family="Hoefler Text" pointSize="20"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstItem="Sdg-Ay-MkJ" firstAttribute="leading" secondItem="Mkt-e0-TOz" secondAttribute="leading" id="0cS-RU-bDD"/>
-                                                        <constraint firstAttribute="bottom" secondItem="5jC-l9-hc6" secondAttribute="bottom" id="1Dk-jC-jbD"/>
-                                                        <constraint firstAttribute="trailing" secondItem="5jC-l9-hc6" secondAttribute="trailing" id="J4W-5E-ju0"/>
-                                                        <constraint firstItem="5jC-l9-hc6" firstAttribute="leading" secondItem="Mkt-e0-TOz" secondAttribute="leading" id="LAf-3T-PjS"/>
+                                                        <constraint firstItem="4Qe-fN-711" firstAttribute="top" secondItem="iGb-2U-SA0" secondAttribute="bottom" constant="-35" id="G4y-Qz-OwN"/>
+                                                        <constraint firstAttribute="bottom" secondItem="4Qe-fN-711" secondAttribute="bottom" id="OZj-43-wJs"/>
+                                                        <constraint firstAttribute="trailing" secondItem="4Qe-fN-711" secondAttribute="trailing" id="OiH-z2-RhB"/>
+                                                        <constraint firstItem="4Qe-fN-711" firstAttribute="leading" secondItem="Mkt-e0-TOz" secondAttribute="leading" id="b7Y-ac-l73"/>
                                                         <constraint firstAttribute="bottom" secondItem="Sdg-Ay-MkJ" secondAttribute="bottom" id="kzK-Rm-PAD"/>
                                                         <constraint firstAttribute="trailing" secondItem="Sdg-Ay-MkJ" secondAttribute="trailing" id="s0F-LW-ScL"/>
                                                         <constraint firstItem="Sdg-Ay-MkJ" firstAttribute="top" secondItem="Mkt-e0-TOz" secondAttribute="top" id="xQA-WP-hdp"/>
+                                                        <constraint firstItem="iGb-2U-SA0" firstAttribute="centerX" secondItem="Mkt-e0-TOz" secondAttribute="centerX" id="ziY-aS-0CH"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -141,8 +121,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="foodImg" destination="Sdg-Ay-MkJ" id="WyW-rd-zvq"/>
-                                            <outlet property="foodTitle" destination="sQu-xt-elh" id="E9R-bQ-X2d"/>
-                                            <outlet property="foodType" destination="xyf-Qr-CnK" id="xLX-xg-b7U"/>
+                                            <outlet property="foodTitle" destination="iGb-2U-SA0" id="1rx-Q3-Ra0"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

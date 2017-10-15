@@ -3,6 +3,7 @@ import UIKit
 import CoreData
 
 class LoadingVC: UIViewController {
+     var copiesArray = [String]()
     var delegate: fillerProtocal?
     var calledApi = ApiCaller()
     var fetchData = [NSManagedObject]()
@@ -14,10 +15,12 @@ class LoadingVC: UIViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         deleteRecipes()
+        print("deleted")
         getRecipe()
 
     }
     func getRecipe(){
+        var copiesArray = [String]()
         print("Got Here")
         let dispatchGroup = DispatchGroup()
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -30,6 +33,8 @@ class LoadingVC: UIViewController {
             calledApi.getRecipe(completion: {
                 (Recipe) in
                 print(Recipe)
+//                if copiesArray.contains(Recipe._recipeTitle){continue}
+                copiesArray.append(Recipe._recipeTitle)
                 let entity = NSEntityDescription.entity(forEntityName: "Recipes", in: context)!
                 let newRecipe = NSManagedObject(entity: entity, insertInto: context)
                 let recipeImageURL = URL(string: Recipe._recipeImage)

@@ -13,6 +13,7 @@ class RecipesVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var delegate: fillerProtocal?
     var calledApi = ApiCaller()
     var recipesArray = [NSManagedObject]()
+    var resultsArray = [NSManagedObject]()
     // let context = appDelegate.persistentContainer.viewContext
     
 
@@ -26,6 +27,9 @@ class RecipesVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 //        getRecipe()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
             return
@@ -37,7 +41,6 @@ class RecipesVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         } catch let error as NSError {
             print("Could not fetch. \(error), \(error.userInfo)")
         }
-        
     }
 
 
@@ -52,9 +55,9 @@ class RecipesVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         if let title = recipesArray[indexPath.row].value(forKey: "recipeTitle") as? String {
          cell.foodTitle.text = title
         }
-        if let recipeType = recipesArray[indexPath.row].value(forKey: "recipeType") as? String {
-            cell.foodType.text = recipeType
-        }
+//        if let recipeType = recipesArray[indexPath.row].value(forKey: "recipeType") as? String {
+//            cell.foodType.text = recipeType
+//        }
         
         if let recipeImage = recipesArray[indexPath.row].value(forKey: "recipeImage") as? Data {
             let image = UIImage(data: recipeImage)
@@ -79,6 +82,8 @@ class RecipesVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 //            })
 //        }
 //    }
+    
+
     
  
 
