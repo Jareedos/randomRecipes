@@ -14,6 +14,7 @@ class RecipesVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var calledApi = ApiCaller()
     var recipesArray = [NSManagedObject]()
     var resultsArray = [NSManagedObject]()
+//    var loadingVC = LoadingVC()
     // let context = appDelegate.persistentContainer.viewContext
     
 
@@ -24,6 +25,7 @@ class RecipesVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.separatorStyle = UITableViewCellSeparatorStyle.none
 //        getRecipe()
     }
     
@@ -53,36 +55,23 @@ class RecipesVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             fatalError("The world is coming to an End")
         }
         if let title = recipesArray[indexPath.row].value(forKey: "recipeTitle") as? String {
-         cell.foodTitle.text = title
+         cell.foodTitle.text = title.capitalized
         }
-//        if let recipeType = recipesArray[indexPath.row].value(forKey: "recipeType") as? String {
-//            cell.foodType.text = recipeType
-//        }
         
         if let recipeImage = recipesArray[indexPath.row].value(forKey: "recipeImage") as? Data {
             let image = UIImage(data: recipeImage)
             // SDWebImage
             cell.foodImg.image = image
         }
-//        cell.foodType.text = recipesArray[indexPath.row]._recipeType
-//        let recipeImageURL = URL(string: String(recipesArray[indexPath.row]._recipeImage))
-//        let recipePictureData = NSData(contentsOf: recipeImageURL!)
-//        let recipePicture = UIImage(data: recipePictureData! as Data) ?? #imageLiteral(resourceName: "foodApiTester")
-//        cell.foodImg.image = recipePicture
+
         return cell
     }
 
-   
-//    func getRecipe(){
-//        for _ in 1...20 {
-//            calledApi.getRecipe(completion:{ (Recipe) in
-//                self.recipesArray.append(Recipe)
-//                DispatchQueue.main.async(){
-//                self.tableView.reloadData()
-//             }
-//            })
-//        }
-//    }
+    @IBAction func randomizeBtnPressed(_ sender: Any) {
+        LoadingVC().getRecipe()
+    }
+    
+
     
 
     

@@ -24,10 +24,7 @@ class LoadingVC: UIViewController {
         print("Got Here")
         let dispatchGroup = DispatchGroup()
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
-//        print(appDelegate, #line, #function)
         let context = appDelegate.persistentContainer.viewContext
-//        print(context, #line, #function, Date())
-//        deleteRecipes()
         for _ in 1...15 {
             dispatchGroup.enter()
             calledApi.getRecipe(completion: {
@@ -56,13 +53,9 @@ class LoadingVC: UIViewController {
                 dispatchGroup.leave()
             })
         }
-        print(#line, #function, "<<<")
-       // performSegue(withIdentifier: "loadingSegue" , sender: nil)
-        print(#line, #function, "<<<")
         print(Thread.current, #line, "The thread baby!")
         dispatchGroup.notify(queue: .main) {
-//            print("Both functions complete 👍")
-         self.performSegue(withIdentifier: "loadingSegue" , sender: nil)
+        self.performSegue(withIdentifier: "loadingSegue" , sender: nil)
         }
     }
     

@@ -22,7 +22,7 @@ class RecipesTableViewCell: UITableViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        containerView.layer.cornerRadius = 5
+        containerView.layer.cornerRadius = 10
         containerView.layer.masksToBounds = true
     }
 

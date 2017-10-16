@@ -31,7 +31,7 @@ class ApiCaller : fillerProtocal {
 //                             return
 //                            } else {
 //                            self.copiesArray.append(recipeTitle as! String)
-                            let newRecipe = Recipe(recipeTitle: recipeTitle as! String, recipeType: recipeType as! String, recipeOrigin: recipeOrigin as! String, recipeImage:    recipeImage as! String, recipeInstructions: recipeInstructions as! String)
+                            let newRecipe = Recipe(recipeTitle: recipeTitle as! String, recipeType: recipeType as! String, recipeOrigin: recipeOrigin as! String, recipeImage: recipeImage as! String, recipeInstructions: recipeInstructions as! String)
                             for tuple in tupleArray {
                                 newRecipe._ingredientsArray.append(tuple.0)
                                 newRecipe._ingredientMeasurementsArray.append(tuple.1)
