@@ -13,7 +13,6 @@ class RecipesVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var delegate: fillerProtocal?
     var calledApi = ApiCaller()
     var recipesArray = [NSManagedObject]()
-    var resultsArray = [NSManagedObject]()
 //    var loadingVC = LoadingVC()
     // let context = appDelegate.persistentContainer.viewContext
     
@@ -69,6 +68,14 @@ class RecipesVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBAction func randomizeBtnPressed(_ sender: Any) {
         LoadingVC().getRecipe()
+    }
+    
+   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let todoListsCellThatWasClicked = sender as! UITableViewCell
+        let indexPath = self.tableView.indexPath(for: todoListsCellThatWasClicked)
+        let toDoItemToPass = recipesArray[(indexPath?.row)!]
+        let detailViewController = segue.destination as! RecipeDetailVC
+        detailViewController.recipeObj = toDoItemToPass
     }
     
 

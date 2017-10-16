@@ -35,7 +35,7 @@
                                 <rect key="frame" x="0.0" y="104" width="375" height="563"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RecipesTableViewCell" rowHeight="237" id="KuD-JG-EQr" customClass="RecipesTableViewCell" customModule="randomRecipes" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="RecipesTableViewCell" rowHeight="237" id="KuD-JG-EQr" customClass="RecipesTableViewCell" customModule="randomRecipes" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="237"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KuD-JG-EQr" id="Cgo-0X-DTS">
@@ -90,6 +90,7 @@
                                             <outlet property="containerView" destination="Mkt-e0-TOz" id="Vsz-Iz-lkP"/>
                                             <outlet property="foodImg" destination="Sdg-Ay-MkJ" id="WyW-rd-zvq"/>
                                             <outlet property="foodTitle" destination="iGb-2U-SA0" id="1rx-Q3-Ra0"/>
+                                            <segue destination="4X5-z3-qja" kind="show" id="CTB-bj-rjm"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -140,6 +141,7 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <accessibility key="accessibilityConfiguration" label="Back"/>
                         <constraints>
                             <constraint firstItem="X2R-Lf-nxh" firstAttribute="leading" secondItem="ALH-u4-kjq" secondAttribute="leading" constant="6" id="1oc-ty-OAr"/>
                             <constraint firstItem="KCj-YF-Sar" firstAttribute="bottom" secondItem="ALH-u4-kjq" secondAttribute="bottom" id="348-Cy-l6k"/>
@@ -169,7 +171,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ALH-u4-kjq"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Recipe Randomizer" id="jcw-vO-MMH"/>
+                    <navigationItem key="navigationItem" title="Recipe Randomizer" id="jcw-vO-MMH">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="S7O-in-4gG"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="ZIM-Vr-Ncb" id="RdL-VN-dZg"/>
                     </connections>
@@ -177,6 +181,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0NQ-OR-tVS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="872.79999999999995" y="-734.48275862068976"/>
+        </scene>
+        <!--Recipe DetailVC-->
+        <scene sceneID="OH0-6L-fdZ">
+            <objects>
+                <viewController id="4X5-z3-qja" customClass="RecipeDetailVC" customModule="randomRecipes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Lhe-yA-prO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="mmr-QX-zdf"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jb9-20-CFv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1657" y="-734"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="AWH-uL-Ozt">

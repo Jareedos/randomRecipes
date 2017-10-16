@@ -19,6 +19,7 @@
 		BF734EBC1F8C679E004B8295 /* FillerProtocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF734EBB1F8C679E004B8295 /* FillerProtocal.swift */; };
 		BF734F061F8F0C3F004B8295 /* LoadingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF734F051F8F0C3F004B8295 /* LoadingVC.swift */; };
 		BF734F921F91165A004B8295 /* randomRecipes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BF734F901F911659004B8295 /* randomRecipes.xcdatamodeld */; };
+		BF734F9B1F9527C8004B8295 /* RecipeDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF734F9A1F9527C8004B8295 /* RecipeDetailVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		BF734EBB1F8C679E004B8295 /* FillerProtocal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FillerProtocal.swift; sourceTree = "<group>"; };
 		BF734F051F8F0C3F004B8295 /* LoadingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingVC.swift; sourceTree = "<group>"; };
 		BF734F911F911659004B8295 /* randomRecies.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = randomRecies.xcdatamodel; sourceTree = "<group>"; };
+		BF734F9A1F9527C8004B8295 /* RecipeDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +54,7 @@
 		BF734E931F8BDC53004B8295 = {
 			isa = PBXGroup;
 			children = (
+				BF734F9A1F9527C8004B8295 /* RecipeDetailVC.swift */,
 				BF734F901F911659004B8295 /* randomRecipes.xcdatamodeld */,
 				BF734F051F8F0C3F004B8295 /* LoadingVC.swift */,
 				BF734EBB1F8C679E004B8295 /* FillerProtocal.swift */,
@@ -160,6 +163,7 @@
 				BF734F921F91165A004B8295 /* randomRecipes.xcdatamodeld in Sources */,
 				BF734EA21F8BDC53004B8295 /* RecipesVC.swift in Sources */,
 				BF734F061F8F0C3F004B8295 /* LoadingVC.swift in Sources */,
+				BF734F9B1F9527C8004B8295 /* RecipeDetailVC.swift in Sources */,
 				BF734EA01F8BDC53004B8295 /* AppDelegate.swift in Sources */,
 				BF734EB41F8BE4BE004B8295 /* RecipesTableViewCell.swift in Sources */,
 				BF734EB61F8C1220004B8295 /* Recipe.swift in Sources */,
