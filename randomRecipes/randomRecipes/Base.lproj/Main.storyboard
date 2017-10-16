@@ -189,13 +189,94 @@
                     <view key="view" contentMode="scaleToFill" id="Lhe-yA-prO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="foodApiTester" translatesAutoresizingMaskIntoConstraints="NO" id="ZQW-Ti-FO5">
+                                <rect key="frame" x="10" y="74" width="234" height="234"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="234" id="Urh-op-Vet"/>
+                                    <constraint firstAttribute="height" constant="234" id="h29-bm-Pxi"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recipe Title:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wIN-ZU-irY">
+                                <rect key="frame" x="254.5" y="74" width="112.5" height="18"/>
+                                <fontDescription key="fontDescription" name="HoeflerText-Black" family="Hoefler Text" pointSize="18"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recipe Type:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GLe-rA-sJp">
+                                <rect key="frame" x="254.5" y="182" width="112" height="18"/>
+                                <fontDescription key="fontDescription" name="HoeflerText-Black" family="Hoefler Text" pointSize="18"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recipe Title:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="37S-jM-VGv">
+                                <rect key="frame" x="254.5" y="100" width="112.5" height="53"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53" id="GcR-Jp-gVR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HoeflerText-Black" family="Hoefler Text" pointSize="14"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recipe Title:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="VRW-ol-hI8">
+                                <rect key="frame" x="254.5" y="208" width="112" height="53"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53" id="TEM-O1-nnv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HoeflerText-Black" family="Hoefler Text" pointSize="14"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lNC-K7-ICR">
+                                <rect key="frame" x="254.5" y="269" width="112.5" height="39"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="HoeflerText-Black" family="Hoefler Text" pointSize="17"/>
+                                <state key="normal" title="Share">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredients:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x7G-Tq-CBA">
+                                <rect key="frame" x="10" y="324" width="357" height="29.5"/>
+                                <fontDescription key="fontDescription" name="HoeflerText-Black" family="Hoefler Text" pointSize="29"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="x7G-Tq-CBA" firstAttribute="leading" secondItem="ZQW-Ti-FO5" secondAttribute="leading" id="2Cf-lE-DtE"/>
+                            <constraint firstItem="lNC-K7-ICR" firstAttribute="top" secondItem="VRW-ol-hI8" secondAttribute="bottom" constant="8" id="7R3-nW-rTd"/>
+                            <constraint firstItem="mmr-QX-zdf" firstAttribute="trailing" secondItem="lNC-K7-ICR" secondAttribute="trailing" constant="8" id="FM5-L4-SBd"/>
+                            <constraint firstItem="wIN-ZU-irY" firstAttribute="leading" secondItem="ZQW-Ti-FO5" secondAttribute="trailing" constant="10.5" id="HXz-4f-cSB"/>
+                            <constraint firstItem="lNC-K7-ICR" firstAttribute="bottom" secondItem="ZQW-Ti-FO5" secondAttribute="bottom" id="Jhd-QB-LsN"/>
+                            <constraint firstItem="mmr-QX-zdf" firstAttribute="trailing" secondItem="VRW-ol-hI8" secondAttribute="trailing" constant="8" id="O6n-GW-a5V"/>
+                            <constraint firstItem="37S-jM-VGv" firstAttribute="leading" secondItem="wIN-ZU-irY" secondAttribute="leading" id="Oai-81-iKF"/>
+                            <constraint firstItem="lNC-K7-ICR" firstAttribute="leading" secondItem="wIN-ZU-irY" secondAttribute="leading" id="QXt-bw-yk6"/>
+                            <constraint firstItem="lNC-K7-ICR" firstAttribute="trailing" secondItem="x7G-Tq-CBA" secondAttribute="trailing" id="Qoq-QK-OuM"/>
+                            <constraint firstItem="mmr-QX-zdf" firstAttribute="trailing" secondItem="GLe-rA-sJp" secondAttribute="trailing" constant="8" id="Zff-dH-dEs"/>
+                            <constraint firstItem="GLe-rA-sJp" firstAttribute="leading" secondItem="wIN-ZU-irY" secondAttribute="leading" id="cPR-56-G1O"/>
+                            <constraint firstItem="VRW-ol-hI8" firstAttribute="top" secondItem="GLe-rA-sJp" secondAttribute="bottom" constant="8" id="cvb-Je-eH3"/>
+                            <constraint firstItem="mmr-QX-zdf" firstAttribute="trailing" secondItem="37S-jM-VGv" secondAttribute="trailing" constant="8" id="dwq-kx-RQg"/>
+                            <constraint firstItem="x7G-Tq-CBA" firstAttribute="top" secondItem="ZQW-Ti-FO5" secondAttribute="bottom" constant="16" id="fck-FI-hj9"/>
+                            <constraint firstItem="ZQW-Ti-FO5" firstAttribute="leading" secondItem="mmr-QX-zdf" secondAttribute="leading" constant="10" id="gFe-QX-oPq"/>
+                            <constraint firstItem="mmr-QX-zdf" firstAttribute="trailing" secondItem="wIN-ZU-irY" secondAttribute="trailing" constant="8" id="jGd-LL-UnK"/>
+                            <constraint firstItem="ZQW-Ti-FO5" firstAttribute="top" secondItem="mmr-QX-zdf" secondAttribute="top" constant="10" id="ks2-fV-1kM"/>
+                            <constraint firstItem="wIN-ZU-irY" firstAttribute="top" secondItem="ZQW-Ti-FO5" secondAttribute="top" id="uKH-fM-MWq"/>
+                            <constraint firstItem="VRW-ol-hI8" firstAttribute="leading" secondItem="wIN-ZU-irY" secondAttribute="leading" id="ub4-He-ggt"/>
+                            <constraint firstItem="37S-jM-VGv" firstAttribute="top" secondItem="wIN-ZU-irY" secondAttribute="bottom" constant="8" id="vD1-Ud-EyK"/>
+                            <constraint firstItem="GLe-rA-sJp" firstAttribute="top" secondItem="37S-jM-VGv" secondAttribute="bottom" constant="29" id="zFX-6H-ltq"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="mmr-QX-zdf"/>
                     </view>
+                    <connections>
+                        <outlet property="recipeImage" destination="ZQW-Ti-FO5" id="1Bs-PI-NYV"/>
+                        <outlet property="recipeTitle" destination="37S-jM-VGv" id="xkA-GI-Dcr"/>
+                        <outlet property="recipeType" destination="VRW-ol-hI8" id="Dm5-Iw-1lH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jb9-20-CFv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1657" y="-734"/>
+            <point key="canvasLocation" x="1656.8" y="-734.48275862068976"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="AWH-uL-Ozt">
