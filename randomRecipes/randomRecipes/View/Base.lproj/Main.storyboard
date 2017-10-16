@@ -18,7 +18,7 @@
         <!--Recipe Randomizer-->
         <scene sceneID="Dbd-eO-0OC">
             <objects>
-                <viewController id="q8l-Lp-2up" customClass="RecipesVC" customModule="randomRecipes" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="flipHorizontal" id="q8l-Lp-2up" customClass="RecipesVC" customModule="randomRecipes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QvD-Dz-tTH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -235,6 +235,23 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Owz-YL-FcL">
+                                <rect key="frame" x="10" y="358.5" width="357" height="163"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="163" id="6df-Il-Xo1"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="s14-XX-UMN">
+                                        <rect key="frame" x="0.0" y="28" width="357" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="s14-XX-UMN" id="BNS-l4-tby">
+                                            <rect key="frame" x="0.0" y="0.0" width="357" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredients:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x7G-Tq-CBA">
                                 <rect key="frame" x="10" y="324" width="357" height="29.5"/>
                                 <fontDescription key="fontDescription" name="HoeflerText-Black" family="Hoefler Text" pointSize="29"/>
@@ -247,8 +264,10 @@
                             <constraint firstItem="x7G-Tq-CBA" firstAttribute="leading" secondItem="ZQW-Ti-FO5" secondAttribute="leading" id="2Cf-lE-DtE"/>
                             <constraint firstItem="lNC-K7-ICR" firstAttribute="top" secondItem="VRW-ol-hI8" secondAttribute="bottom" constant="8" id="7R3-nW-rTd"/>
                             <constraint firstItem="mmr-QX-zdf" firstAttribute="trailing" secondItem="lNC-K7-ICR" secondAttribute="trailing" constant="8" id="FM5-L4-SBd"/>
+                            <constraint firstItem="Owz-YL-FcL" firstAttribute="top" secondItem="x7G-Tq-CBA" secondAttribute="bottom" constant="5" id="HOt-9M-OBV"/>
                             <constraint firstItem="wIN-ZU-irY" firstAttribute="leading" secondItem="ZQW-Ti-FO5" secondAttribute="trailing" constant="10.5" id="HXz-4f-cSB"/>
                             <constraint firstItem="lNC-K7-ICR" firstAttribute="bottom" secondItem="ZQW-Ti-FO5" secondAttribute="bottom" id="Jhd-QB-LsN"/>
+                            <constraint firstItem="mmr-QX-zdf" firstAttribute="trailing" secondItem="Owz-YL-FcL" secondAttribute="trailing" constant="8" id="Ljw-ze-YXA"/>
                             <constraint firstItem="mmr-QX-zdf" firstAttribute="trailing" secondItem="VRW-ol-hI8" secondAttribute="trailing" constant="8" id="O6n-GW-a5V"/>
                             <constraint firstItem="37S-jM-VGv" firstAttribute="leading" secondItem="wIN-ZU-irY" secondAttribute="leading" id="Oai-81-iKF"/>
                             <constraint firstItem="lNC-K7-ICR" firstAttribute="leading" secondItem="wIN-ZU-irY" secondAttribute="leading" id="QXt-bw-yk6"/>
@@ -261,6 +280,7 @@
                             <constraint firstItem="ZQW-Ti-FO5" firstAttribute="leading" secondItem="mmr-QX-zdf" secondAttribute="leading" constant="10" id="gFe-QX-oPq"/>
                             <constraint firstItem="mmr-QX-zdf" firstAttribute="trailing" secondItem="wIN-ZU-irY" secondAttribute="trailing" constant="8" id="jGd-LL-UnK"/>
                             <constraint firstItem="ZQW-Ti-FO5" firstAttribute="top" secondItem="mmr-QX-zdf" secondAttribute="top" constant="10" id="ks2-fV-1kM"/>
+                            <constraint firstItem="Owz-YL-FcL" firstAttribute="leading" secondItem="mmr-QX-zdf" secondAttribute="leading" constant="10" id="s7k-PP-Zc1"/>
                             <constraint firstItem="wIN-ZU-irY" firstAttribute="top" secondItem="ZQW-Ti-FO5" secondAttribute="top" id="uKH-fM-MWq"/>
                             <constraint firstItem="VRW-ol-hI8" firstAttribute="leading" secondItem="wIN-ZU-irY" secondAttribute="leading" id="ub4-He-ggt"/>
                             <constraint firstItem="37S-jM-VGv" firstAttribute="top" secondItem="wIN-ZU-irY" secondAttribute="bottom" constant="8" id="vD1-Ud-EyK"/>

@@ -54,11 +54,7 @@
 		BF734E931F8BDC53004B8295 = {
 			isa = PBXGroup;
 			children = (
-				BF734F9A1F9527C8004B8295 /* RecipeDetailVC.swift */,
 				BF734F901F911659004B8295 /* randomRecipes.xcdatamodeld */,
-				BF734F051F8F0C3F004B8295 /* LoadingVC.swift */,
-				BF734EBB1F8C679E004B8295 /* FillerProtocal.swift */,
-				BF734EB91F8C2784004B8295 /* ApiKey.swift */,
 				BF734E9E1F8BDC53004B8295 /* randomRecipes */,
 				BF734E9D1F8BDC53004B8295 /* Products */,
 			);
@@ -75,17 +71,53 @@
 		BF734E9E1F8BDC53004B8295 /* randomRecipes */ = {
 			isa = PBXGroup;
 			children = (
-				BF734E9F1F8BDC53004B8295 /* AppDelegate.swift */,
-				BF734EA11F8BDC53004B8295 /* RecipesVC.swift */,
-				BF734EB71F8C1F48004B8295 /* ApiCaller.swift */,
-				BF734EA31F8BDC53004B8295 /* Main.storyboard */,
+				BF734FA01F954D3D004B8295 /* Util */,
+				BF734F9F1F954B07004B8295 /* View */,
+				BF734F9E1F954AFD004B8295 /* Model */,
+				BF734F9D1F954AEC004B8295 /* Controller */,
 				BF734EA61F8BDC53004B8295 /* Assets.xcassets */,
-				BF734EA81F8BDC53004B8295 /* LaunchScreen.storyboard */,
 				BF734EAB1F8BDC53004B8295 /* Info.plist */,
-				BF734EB31F8BE4BE004B8295 /* RecipesTableViewCell.swift */,
-				BF734EB51F8C1220004B8295 /* Recipe.swift */,
 			);
 			path = randomRecipes;
+			sourceTree = "<group>";
+		};
+		BF734F9D1F954AEC004B8295 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BF734F9A1F9527C8004B8295 /* RecipeDetailVC.swift */,
+				BF734F051F8F0C3F004B8295 /* LoadingVC.swift */,
+				BF734EA11F8BDC53004B8295 /* RecipesVC.swift */,
+				BF734EB31F8BE4BE004B8295 /* RecipesTableViewCell.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BF734F9E1F954AFD004B8295 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BF734EB71F8C1F48004B8295 /* ApiCaller.swift */,
+				BF734EB51F8C1220004B8295 /* Recipe.swift */,
+				BF734EBB1F8C679E004B8295 /* FillerProtocal.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BF734F9F1F954B07004B8295 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BF734EA31F8BDC53004B8295 /* Main.storyboard */,
+				BF734EA81F8BDC53004B8295 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BF734FA01F954D3D004B8295 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				BF734EB91F8C2784004B8295 /* ApiKey.swift */,
+				BF734E9F1F8BDC53004B8295 /* AppDelegate.swift */,
+			);
+			path = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
