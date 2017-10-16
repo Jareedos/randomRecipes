@@ -28,7 +28,7 @@ class LoadingVC: UIViewController {
         let context = appDelegate.persistentContainer.viewContext
 //        print(context, #line, #function, Date())
 //        deleteRecipes()
-        for _ in 1...20 {
+        for _ in 1...15 {
             dispatchGroup.enter()
             calledApi.getRecipe(completion: {
                 (Recipe) in

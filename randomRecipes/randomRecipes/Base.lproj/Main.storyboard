@@ -90,8 +90,8 @@
                                                                 <constraint firstAttribute="height" constant="55" id="l9U-1F-p58"/>
                                                             </constraints>
                                                         </view>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iGb-2U-SA0">
-                                                            <rect key="frame" x="151" y="176" width="54.5" height="20"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="iGb-2U-SA0">
+                                                            <rect key="frame" x="5" y="176" width="345" height="20"/>
                                                             <fontDescription key="fontDescription" name="HoeflerText-Black" family="Hoefler Text" pointSize="20"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
@@ -100,9 +100,11 @@
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstItem="Sdg-Ay-MkJ" firstAttribute="leading" secondItem="Mkt-e0-TOz" secondAttribute="leading" id="0cS-RU-bDD"/>
+                                                        <constraint firstItem="iGb-2U-SA0" firstAttribute="leading" secondItem="Mkt-e0-TOz" secondAttribute="leading" constant="5" id="65n-3x-SN1"/>
                                                         <constraint firstItem="4Qe-fN-711" firstAttribute="top" secondItem="iGb-2U-SA0" secondAttribute="bottom" constant="-35" id="G4y-Qz-OwN"/>
                                                         <constraint firstAttribute="bottom" secondItem="4Qe-fN-711" secondAttribute="bottom" id="OZj-43-wJs"/>
                                                         <constraint firstAttribute="trailing" secondItem="4Qe-fN-711" secondAttribute="trailing" id="OiH-z2-RhB"/>
+                                                        <constraint firstAttribute="trailing" secondItem="iGb-2U-SA0" secondAttribute="trailing" constant="5" id="W7R-gj-XeR"/>
                                                         <constraint firstItem="4Qe-fN-711" firstAttribute="leading" secondItem="Mkt-e0-TOz" secondAttribute="leading" id="b7Y-ac-l73"/>
                                                         <constraint firstAttribute="bottom" secondItem="Sdg-Ay-MkJ" secondAttribute="bottom" id="kzK-Rm-PAD"/>
                                                         <constraint firstAttribute="trailing" secondItem="Sdg-Ay-MkJ" secondAttribute="trailing" id="s0F-LW-ScL"/>
@@ -111,7 +113,7 @@
                                                     </constraints>
                                                 </view>
                                             </subviews>
-                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="Mkt-e0-TOz" secondAttribute="bottom" constant="10" id="CTm-Ys-NKk"/>
                                                 <constraint firstItem="Mkt-e0-TOz" firstAttribute="top" secondItem="Cgo-0X-DTS" secondAttribute="top" constant="10" id="fWx-KS-MAY"/>
