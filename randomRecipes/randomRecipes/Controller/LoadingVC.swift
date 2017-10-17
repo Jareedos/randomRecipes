@@ -48,6 +48,7 @@ class LoadingVC: UIViewController {
                 newRecipe.setValue(Recipe._ingredientMeasurementsArray, forKey: "recipeIngredientMeasurements")
                 newRecipe.setValue(Recipe._recipeOrigin, forKey: "recipeOrigin")
                 newRecipe.setValue(Recipe.favorited, forKey: "favorited")
+                newRecipe.setValue(Recipe._recipeInstructions, forKey: "recipeInstructions")
                 do {
                     try context.save()
                     print("We Saved it")

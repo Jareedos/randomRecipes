@@ -65,6 +65,14 @@ class RecipesVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let favoriteAction = UITableViewRowAction(style: .normal, title: "♡ Favorite") { (action, index) in
+        }
+        favoriteAction.backgroundColor = UIColor(red:0.92, green:0.07, blue:0.07, alpha:1.0)
+        
+        return [favoriteAction]
+    }
 
     @IBAction func randomizeBtnPressed(_ sender: Any) {
         LoadingVC().getRecipe()

@@ -47,17 +47,9 @@ class RecipeDetailVC: UIViewController, UITableViewDataSource, UITableViewDelega
         
         guard let ingredientsArray = recipeObj.value(forKey:"recipeIngredients") as? [String] else {return}
         guard let measurementsArray = recipeObj.value(forKey: "recipeIngredientMeasurements") as? [String] else {return}
-        print(">>>>>>>>>>>>>>>>>>>>")
-        print(">>>>>>>>>>>>>>>>>>>>")
-        print(">>>>>>>>>>>>>>>>>>>>")
-        print(">>>>>>>>>>>>>>>>>>>>")
-        print(ingredientsArray)
-        print(measurementsArray)
         
-        for ingredient in ingredientsArray {
-            for measurement in measurementsArray {
-                IngANDMeasurementsArray.append((measurement, ingredient))
-            }
+        for index in 0..<ingredientsArray.count {
+                IngANDMeasurementsArray.append((measurementsArray[index], ingredientsArray[index]))
         }
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -69,12 +61,12 @@ class RecipeDetailVC: UIViewController, UITableViewDataSource, UITableViewDelega
             fatalError("The World Is Ending")
         }
         let cellCount = indexPath.row + 1
-//        print(IngANDMeasurementsArray[indexPath.row].0)
-//        print(IngANDMeasurementsArray[indexPath.row].1)
-        cell.cellCountLbl.text = String(cellCount)
+        cell.cellCountLbl.text = String("\(cellCount).")
         cell.measurementLbl.text = IngANDMeasurementsArray[indexPath.row].0
         cell.IngredientLbl.text = IngANDMeasurementsArray[indexPath.row].1
         return cell
     }
+    
+
     
 }
