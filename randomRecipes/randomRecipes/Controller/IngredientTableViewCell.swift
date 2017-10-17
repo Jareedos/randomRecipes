@@ -9,7 +9,10 @@
 import UIKit
 
 class IngredientTableViewCell: UITableViewCell {
-
+    @IBOutlet weak var cellCountLbl: UILabel!
+    @IBOutlet weak var measurementLbl: UILabel!
+    @IBOutlet weak var IngredientLbl: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

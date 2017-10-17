@@ -197,20 +197,20 @@
                                     <constraint firstAttribute="height" constant="234" id="h29-bm-Pxi"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recipe Title:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wIN-ZU-irY">
-                                <rect key="frame" x="254.5" y="74" width="112.5" height="18"/>
-                                <fontDescription key="fontDescription" name="HoeflerText-Black" family="Hoefler Text" pointSize="18"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recipe Title:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="wIN-ZU-irY">
+                                <rect key="frame" x="254.5" y="74" width="112.5" height="20"/>
+                                <fontDescription key="fontDescription" name="HoeflerText-Black" family="Hoefler Text" pointSize="20"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recipe Type:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GLe-rA-sJp">
-                                <rect key="frame" x="254.5" y="182" width="112" height="18"/>
-                                <fontDescription key="fontDescription" name="HoeflerText-Black" family="Hoefler Text" pointSize="18"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recipe Type:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="GLe-rA-sJp">
+                                <rect key="frame" x="254.5" y="184" width="112" height="20"/>
+                                <fontDescription key="fontDescription" name="HoeflerText-Black" family="Hoefler Text" pointSize="20"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recipe Title:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="37S-jM-VGv">
-                                <rect key="frame" x="254.5" y="100" width="112.5" height="53"/>
+                                <rect key="frame" x="254.5" y="102" width="112.5" height="53"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="53" id="GcR-Jp-gVR"/>
                                 </constraints>
@@ -219,7 +219,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recipe Title:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="VRW-ol-hI8">
-                                <rect key="frame" x="254.5" y="208" width="112" height="53"/>
+                                <rect key="frame" x="254.5" y="212" width="112" height="53"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="53" id="TEM-O1-nnv"/>
                                 </constraints>
@@ -228,7 +228,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lNC-K7-ICR">
-                                <rect key="frame" x="254.5" y="269" width="112.5" height="39"/>
+                                <rect key="frame" x="254.5" y="273" width="112.5" height="35"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="HoeflerText-Black" family="Hoefler Text" pointSize="17"/>
                                 <state key="normal" title="Share">
@@ -236,13 +236,13 @@
                                 </state>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Owz-YL-FcL">
-                                <rect key="frame" x="10" y="358.5" width="357" height="163"/>
+                                <rect key="frame" x="10" y="354.5" width="357" height="150"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="163" id="6df-Il-Xo1"/>
+                                    <constraint firstAttribute="height" constant="150" id="6df-Il-Xo1"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="s14-XX-UMN">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="IngredientTableViewCell" id="s14-XX-UMN" customClass="IngredientTableViewCell" customModule="randomRecipes" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="357" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="s14-XX-UMN" id="BNS-l4-tby">
@@ -253,16 +253,37 @@
                                 </prototypes>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredients:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x7G-Tq-CBA">
-                                <rect key="frame" x="10" y="324" width="357" height="29.5"/>
+                                <rect key="frame" x="10" y="320" width="357" height="29.5"/>
                                 <fontDescription key="fontDescription" name="HoeflerText-Black" family="Hoefler Text" pointSize="29"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cooking Instructions:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LNn-30-uEP">
+                                <rect key="frame" x="10" y="512" width="357" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="njp-vW-QjB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HoeflerText-Black" family="Hoefler Text" pointSize="29"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CSr-sl-1Ql">
+                                <rect key="frame" x="10" y="553" width="357" height="114"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="HoeflerText-Black" family="Hoefler Text" pointSize="12"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="x7G-Tq-CBA" firstAttribute="leading" secondItem="ZQW-Ti-FO5" secondAttribute="leading" id="2Cf-lE-DtE"/>
+                            <constraint firstItem="LNn-30-uEP" firstAttribute="top" secondItem="Owz-YL-FcL" secondAttribute="bottom" constant="8" id="5Qf-KA-rsZ"/>
                             <constraint firstItem="lNC-K7-ICR" firstAttribute="top" secondItem="VRW-ol-hI8" secondAttribute="bottom" constant="8" id="7R3-nW-rTd"/>
+                            <constraint firstItem="LNn-30-uEP" firstAttribute="trailing" secondItem="Owz-YL-FcL" secondAttribute="trailing" id="97d-zH-ueS"/>
+                            <constraint firstItem="CSr-sl-1Ql" firstAttribute="bottom" secondItem="mmr-QX-zdf" secondAttribute="bottom" id="Cbv-Ge-IFS"/>
+                            <constraint firstItem="LNn-30-uEP" firstAttribute="leading" secondItem="Owz-YL-FcL" secondAttribute="leading" id="DbR-fV-Eac"/>
                             <constraint firstItem="mmr-QX-zdf" firstAttribute="trailing" secondItem="lNC-K7-ICR" secondAttribute="trailing" constant="8" id="FM5-L4-SBd"/>
                             <constraint firstItem="Owz-YL-FcL" firstAttribute="top" secondItem="x7G-Tq-CBA" secondAttribute="bottom" constant="5" id="HOt-9M-OBV"/>
                             <constraint firstItem="wIN-ZU-irY" firstAttribute="leading" secondItem="ZQW-Ti-FO5" secondAttribute="trailing" constant="10.5" id="HXz-4f-cSB"/>
@@ -270,14 +291,17 @@
                             <constraint firstItem="mmr-QX-zdf" firstAttribute="trailing" secondItem="Owz-YL-FcL" secondAttribute="trailing" constant="8" id="Ljw-ze-YXA"/>
                             <constraint firstItem="mmr-QX-zdf" firstAttribute="trailing" secondItem="VRW-ol-hI8" secondAttribute="trailing" constant="8" id="O6n-GW-a5V"/>
                             <constraint firstItem="37S-jM-VGv" firstAttribute="leading" secondItem="wIN-ZU-irY" secondAttribute="leading" id="Oai-81-iKF"/>
+                            <constraint firstItem="CSr-sl-1Ql" firstAttribute="trailing" secondItem="LNn-30-uEP" secondAttribute="trailing" id="QDW-Bb-Yr1"/>
                             <constraint firstItem="lNC-K7-ICR" firstAttribute="leading" secondItem="wIN-ZU-irY" secondAttribute="leading" id="QXt-bw-yk6"/>
                             <constraint firstItem="lNC-K7-ICR" firstAttribute="trailing" secondItem="x7G-Tq-CBA" secondAttribute="trailing" id="Qoq-QK-OuM"/>
+                            <constraint firstItem="CSr-sl-1Ql" firstAttribute="leading" secondItem="LNn-30-uEP" secondAttribute="leading" id="SlQ-s0-YNj"/>
                             <constraint firstItem="mmr-QX-zdf" firstAttribute="trailing" secondItem="GLe-rA-sJp" secondAttribute="trailing" constant="8" id="Zff-dH-dEs"/>
                             <constraint firstItem="GLe-rA-sJp" firstAttribute="leading" secondItem="wIN-ZU-irY" secondAttribute="leading" id="cPR-56-G1O"/>
                             <constraint firstItem="VRW-ol-hI8" firstAttribute="top" secondItem="GLe-rA-sJp" secondAttribute="bottom" constant="8" id="cvb-Je-eH3"/>
                             <constraint firstItem="mmr-QX-zdf" firstAttribute="trailing" secondItem="37S-jM-VGv" secondAttribute="trailing" constant="8" id="dwq-kx-RQg"/>
-                            <constraint firstItem="x7G-Tq-CBA" firstAttribute="top" secondItem="ZQW-Ti-FO5" secondAttribute="bottom" constant="16" id="fck-FI-hj9"/>
+                            <constraint firstItem="x7G-Tq-CBA" firstAttribute="top" secondItem="ZQW-Ti-FO5" secondAttribute="bottom" constant="12" id="fck-FI-hj9"/>
                             <constraint firstItem="ZQW-Ti-FO5" firstAttribute="leading" secondItem="mmr-QX-zdf" secondAttribute="leading" constant="10" id="gFe-QX-oPq"/>
+                            <constraint firstItem="CSr-sl-1Ql" firstAttribute="top" secondItem="LNn-30-uEP" secondAttribute="bottom" constant="8" id="hVL-vY-y9v"/>
                             <constraint firstItem="mmr-QX-zdf" firstAttribute="trailing" secondItem="wIN-ZU-irY" secondAttribute="trailing" constant="8" id="jGd-LL-UnK"/>
                             <constraint firstItem="ZQW-Ti-FO5" firstAttribute="top" secondItem="mmr-QX-zdf" secondAttribute="top" constant="10" id="ks2-fV-1kM"/>
                             <constraint firstItem="Owz-YL-FcL" firstAttribute="leading" secondItem="mmr-QX-zdf" secondAttribute="leading" constant="10" id="s7k-PP-Zc1"/>
@@ -289,9 +313,11 @@
                         <viewLayoutGuide key="safeArea" id="mmr-QX-zdf"/>
                     </view>
                     <connections>
+                        <outlet property="cookingInstructions" destination="CSr-sl-1Ql" id="FTK-SU-WCd"/>
                         <outlet property="recipeImage" destination="ZQW-Ti-FO5" id="1Bs-PI-NYV"/>
                         <outlet property="recipeTitle" destination="37S-jM-VGv" id="xkA-GI-Dcr"/>
                         <outlet property="recipeType" destination="VRW-ol-hI8" id="Dm5-Iw-1lH"/>
+                        <outlet property="tableView" destination="Owz-YL-FcL" id="xvW-S2-XBf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jb9-20-CFv" userLabel="First Responder" sceneMemberID="firstResponder"/>

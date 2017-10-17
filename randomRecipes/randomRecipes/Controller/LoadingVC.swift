@@ -29,7 +29,12 @@ class LoadingVC: UIViewController {
             dispatchGroup.enter()
             calledApi.getRecipe(completion: {
                 (Recipe) in
-                print(Recipe)
+//                print(Recipe)
+//                print(">>>>>>>>>>>>>>")
+//                print(">>>>>>>>>>>>>>")
+//                print(">>>>>>>>>>>>>>")
+//                print(Recipe._ingredientMeasurementsArray)
+//                print(Recipe._ingredientsArray)
                 if !copiesArray.contains(Recipe._recipeTitle) {
                 copiesArray.append(Recipe._recipeTitle)
                 let entity = NSEntityDescription.entity(forEntityName: "Recipes", in: context)!

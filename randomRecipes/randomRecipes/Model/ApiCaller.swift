@@ -32,6 +32,12 @@ class ApiCaller : fillerProtocal {
                                 newRecipe._ingredientMeasurementsArray.append(tuple.1)
                      
                             }
+//                        print(">>>>>>>>>>>>>>")
+//                        print(">>>>>>>>>>>>>>")
+//                        print(">>>>>>>>>>>>>>")
+//                        print(newRecipe._ingredientMeasurementsArray)
+//                        print(newRecipe._ingredientsArray)
+                        
                         completion(newRecipe)
                     } catch {
                         fatalError("Sorry")
