@@ -16,6 +16,7 @@ class Recipe {
     let _recipeInstructions: String
     var _ingredientsArray: [String] = []
     var _ingredientMeasurementsArray: [String] = []
+    var favorited = false 
     // creating an array of tuples for the ingredients and it's measurements
     // created two arrays to conform with coreData
     

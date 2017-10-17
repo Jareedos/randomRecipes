@@ -42,6 +42,7 @@ class LoadingVC: UIViewController {
                 newRecipe.setValue(Recipe._ingredientsArray, forKey: "recipeIngredients")
                 newRecipe.setValue(Recipe._ingredientMeasurementsArray, forKey: "recipeIngredientMeasurements")
                 newRecipe.setValue(Recipe._recipeOrigin, forKey: "recipeOrigin")
+                newRecipe.setValue(Recipe.favorited, forKey: "favorited")
                 do {
                     try context.save()
                     print("We Saved it")
@@ -67,7 +68,10 @@ class LoadingVC: UIViewController {
         let resultData = result as! [NSManagedObject]
         
         for object in resultData {
-            moc.delete(object)
+          if object.value(forKey: "favorited") as? Bool == false {
+               moc.delete(object)
+               print("not favorited so it was deleted")
+          }
         }
         
         do {

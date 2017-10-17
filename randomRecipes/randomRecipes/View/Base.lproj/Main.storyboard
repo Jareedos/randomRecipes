@@ -18,7 +18,7 @@
         <!--Recipe Randomizer-->
         <scene sceneID="Dbd-eO-0OC">
             <objects>
-                <viewController modalTransitionStyle="flipHorizontal" id="q8l-Lp-2up" customClass="RecipesVC" customModule="randomRecipes" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="q8l-Lp-2up" customClass="RecipesVC" customModule="randomRecipes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QvD-Dz-tTH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -185,7 +185,7 @@
         <!--Recipe DetailVC-->
         <scene sceneID="OH0-6L-fdZ">
             <objects>
-                <viewController id="4X5-z3-qja" customClass="RecipeDetailVC" customModule="randomRecipes" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="flipHorizontal" modalPresentationStyle="currentContext" id="4X5-z3-qja" customClass="RecipeDetailVC" customModule="randomRecipes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Lhe-yA-prO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
