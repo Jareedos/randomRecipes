@@ -15,13 +15,12 @@ class LoadingVC: UIViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         deleteRecipes()
-        print("deleted")
         getRecipe()
 
     }
+    
     func getRecipe(){
         var copiesArray = [String]()
-        print("Got Here")
         let dispatchGroup = DispatchGroup()
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
@@ -29,12 +28,6 @@ class LoadingVC: UIViewController {
             dispatchGroup.enter()
             calledApi.getRecipe(completion: {
                 (Recipe) in
-//                print(Recipe)
-//                print(">>>>>>>>>>>>>>")
-//                print(">>>>>>>>>>>>>>")
-//                print(">>>>>>>>>>>>>>")
-//                print(Recipe._ingredientMeasurementsArray)
-//                print(Recipe._ingredientsArray)
                 if !copiesArray.contains(Recipe._recipeTitle) {
                 copiesArray.append(Recipe._recipeTitle)
                 let entity = NSEntityDescription.entity(forEntityName: "Recipes", in: context)!
@@ -47,11 +40,11 @@ class LoadingVC: UIViewController {
                 newRecipe.setValue(Recipe._ingredientsArray, forKey: "recipeIngredients")
                 newRecipe.setValue(Recipe._ingredientMeasurementsArray, forKey: "recipeIngredientMeasurements")
                 newRecipe.setValue(Recipe._recipeOrigin, forKey: "recipeOrigin")
+                newRecipe.setValue(Recipe._favoriteLetter, forKey: "favoriteLetter")
                 newRecipe.setValue(Recipe.favorited, forKey: "favorited")
                 newRecipe.setValue(Recipe._recipeInstructions, forKey: "recipeInstructions")
                 do {
                     try context.save()
-                    print("We Saved it")
                 }
                 catch {
                     print("sorry")
@@ -60,7 +53,7 @@ class LoadingVC: UIViewController {
                 dispatchGroup.leave()
             })
         }
-        print(Thread.current, #line, "The thread baby!")
+
         dispatchGroup.notify(queue: .main) {
         self.performSegue(withIdentifier: "loadingSegue" , sender: nil)
         }
@@ -74,15 +67,13 @@ class LoadingVC: UIViewController {
         let resultData = result as! [NSManagedObject]
         
         for object in resultData {
-          if object.value(forKey: "favorited") as? Bool == false {
-               moc.delete(object)
-               print("not favorited so it was deleted")
-          }
+            if object.value(forKey: "favorited") as? Bool == false {
+                moc.delete(object)
+            }
         }
         
         do {
             try moc.save()
-            print("saved!")
         } catch let error as NSError  {
             print("Could not save \(error), \(error.userInfo)")
         } catch {

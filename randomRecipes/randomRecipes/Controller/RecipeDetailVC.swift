@@ -40,10 +40,9 @@ class RecipeDetailVC: UIViewController, UITableViewDataSource, UITableViewDelega
         if let type = recipeObj.value(forKey: "recipeType") as? String {
             recipeType.text = type
         }
+
+        cookingInstructions.text = recipeObj.value(forKey: "recipeInstructions") as? String ?? "There arn't any cooking instructions available"
         
-        if let instructions = recipeObj.value(forKey: "recipeInstructions") as? String {
-            cookingInstructions.text = instructions
-        }
         
         guard let ingredientsArray = recipeObj.value(forKey:"recipeIngredients") as? [String] else {return}
         guard let measurementsArray = recipeObj.value(forKey: "recipeIngredientMeasurements") as? [String] else {return}

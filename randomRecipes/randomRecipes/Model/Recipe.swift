@@ -16,16 +16,18 @@ class Recipe {
     let _recipeInstructions: String
     var _ingredientsArray: [String] = []
     var _ingredientMeasurementsArray: [String] = []
-    var favorited = false 
+    var favorited = false
+    var _favoriteLetter: String
     // creating an array of tuples for the ingredients and it's measurements
     // created two arrays to conform with coreData
     
-    init(recipeTitle: String, recipeType: String, recipeOrigin: String, recipeImage: String, recipeInstructions: String){
+    init(recipeTitle: String, recipeType: String, recipeOrigin: String, recipeImage: String, recipeInstructions: String, favoriteLetter: String){
         _recipeTitle = recipeTitle
         _recipeType = recipeType
         _recipeOrigin = recipeOrigin
         _recipeImage = recipeImage
         _recipeInstructions = recipeInstructions
+        _favoriteLetter = favoriteLetter
     }
     
     

@@ -67,15 +67,44 @@ class RecipesVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
-        let favoriteAction = UITableViewRowAction(style: .normal, title: "♡ Favorite") { (action, index) in
+        let appDelegate = UIApplication.shared.delegate as? AppDelegate
+        let managedContext = appDelegate?.persistentContainer.viewContext
+        let currentRecipe = recipesArray[indexPath.row]
+        if let currentFavoriteValue = currentRecipe.value(forKey: "favorited") as? Bool {
+            if currentFavoriteValue == false {
+                let favoriteAction = UITableViewRowAction(style: .normal, title: "♥︎ Favorite") { (action, index) in
+                    currentRecipe.setValue(true, forKey: "favorited")
+                    do
+                    {
+                        try managedContext!.save()
+                    }
+                    catch
+                    {
+                        print("this isnt working wtf")
+                    }
+                }
+                   favoriteAction.backgroundColor = UIColor(red:0.92, green:0.07, blue:0.07, alpha:1.0)
+                   return [favoriteAction]
+            } else {
+                let unFavoriteAction = UITableViewRowAction(style: .normal, title: "♡ UnFavorite") { (action, index) in
+                    currentRecipe.setValue(false, forKey: "favorited")
+                    do
+                    {
+                        try managedContext!.save()
+                    }
+                    catch
+                    {
+                        print("I may have figured it out")
+                    }
+                }
+                unFavoriteAction.backgroundColor = UIColor(red:0.05, green:0.47, blue:0.96, alpha:1.0)
+                return [unFavoriteAction]
+            }
         }
-        favoriteAction.backgroundColor = UIColor(red:0.92, green:0.07, blue:0.07, alpha:1.0)
-        
-        return [favoriteAction]
+        return []
     }
 
     @IBAction func randomizeBtnPressed(_ sender: Any) {
-        LoadingVC().getRecipe()
     }
     
    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

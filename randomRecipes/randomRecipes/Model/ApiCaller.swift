@@ -3,7 +3,6 @@ import Foundation
 
 class ApiCaller : fillerProtocal {
     func getRecipe(completion: @escaping (Recipe) -> Void){
-        print("HERE")
         let urlString = apiCall
         if let url = URL(string: urlString) {
             URLSession.shared.dataTask(with: url) {data,respone,error in
@@ -26,18 +25,11 @@ class ApiCaller : fillerProtocal {
                                 tupleArray.append((tuple.0 as! String,tuple.1 as! String))
                             }
                         }
-                            let newRecipe = Recipe(recipeTitle: recipeTitle as! String, recipeType: recipeType as! String, recipeOrigin: recipeOrigin as! String, recipeImage: recipeImage as! String, recipeInstructions: recipeInstructions as! String)
+                        let newRecipe = Recipe(recipeTitle: recipeTitle as! String, recipeType: recipeType as! String, recipeOrigin: recipeOrigin as! String, recipeImage: recipeImage as! String, recipeInstructions: recipeInstructions as! String, favoriteLetter: "T")
                             for tuple in tupleArray {
                                 newRecipe._ingredientsArray.append(tuple.0)
                                 newRecipe._ingredientMeasurementsArray.append(tuple.1)
-                     
                             }
-//                        print(">>>>>>>>>>>>>>")
-//                        print(">>>>>>>>>>>>>>")
-//                        print(">>>>>>>>>>>>>>")
-//                        print(newRecipe._ingredientMeasurementsArray)
-//                        print(newRecipe._ingredientsArray)
-                        
                         completion(newRecipe)
                     } catch {
                         fatalError("Sorry")
