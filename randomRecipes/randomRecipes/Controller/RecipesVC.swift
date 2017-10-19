@@ -9,15 +9,15 @@
 import UIKit
 import CoreData
 
-class RecipesVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class RecipesVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
+    
     var delegate: fillerProtocal?
     var calledApi = ApiCaller()
     var recipesArray = [NSManagedObject]()
-//    var loadingVC = LoadingVC()
-    // let context = appDelegate.persistentContainer.viewContext
+    var favoritesArray = [NSManagedObject]()
+    var effect: UIVisualEffect!
     
-
-   
+    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -25,8 +25,8 @@ class RecipesVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.separatorStyle = UITableViewCellSeparatorStyle.none
-//        getRecipe()
-    }
+        searchBar.delegate = self
+     }
     
     override func viewDidAppear(_ animated: Bool) {
     }
@@ -39,6 +39,13 @@ class RecipesVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Recipes")
         do {
             recipesArray = try managedContext.fetch(fetchRequest as! NSFetchRequest<NSFetchRequestResult>) as! [NSManagedObject]
+            for recipeObject in recipesArray {
+                if let unwrappedValue = recipeObject.value(forKey: "favorited") as? Bool {
+                    if unwrappedValue == true {
+                        favoritesArray.append(recipeObject)
+                    }
+                }
+            }
         } catch let error as NSError {
             print("Could not fetch. \(error), \(error.userInfo)")
         }
@@ -104,17 +111,46 @@ class RecipesVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         return []
     }
 
-    @IBAction func randomizeBtnPressed(_ sender: Any) {
-    }
+    
     
    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let todoListsCellThatWasClicked = sender as! UITableViewCell
-        let indexPath = self.tableView.indexPath(for: todoListsCellThatWasClicked)
-        let toDoItemToPass = recipesArray[(indexPath?.row)!]
-        let detailViewController = segue.destination as! RecipeDetailVC
-        detailViewController.recipeObj = toDoItemToPass
+        if (segue.identifier == "notificationSegue") {
+            let arrayToPass = favoritesArray
+            let notificationVC = segue.destination as! NotificationVC
+            notificationVC.favoritesArray = arrayToPass
+        } else {
+            let todoListsCellThatWasClicked = sender as! UITableViewCell
+            let indexPath = self.tableView.indexPath(for: todoListsCellThatWasClicked)
+            let toDoItemToPass = recipesArray[(indexPath?.row)!]
+            let detailViewController = segue.destination as! RecipeDetailVC
+            detailViewController.recipeObj = toDoItemToPass
+        }
     }
     
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        print("Its here")
+        let userInput = searchBar.text
+        if let trimmedString = stringTrimmer(stringToTrim: userInput){
+            if trimmedString.isEmpty {
+               let alert = UIAlertController(title: "The Search Bar is empty", message: "Please enter Text" , preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.cancel, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+            }
+        }
+//        let alert = UIAlertController(title: "The Search Bar is empty", message: "Please enter Text" , preferredStyle: UIAlertControllerStyle.alert)
+//        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.cancel, handler: nil))
+//        self.present(alert, animated: true, completion: nil)
+    }
+    
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        self.searchBar.showsCancelButton = true
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.showsCancelButton = false
+        searchBar.text = ""
+        searchBar.resignFirstResponder()
+    }
 
     
 

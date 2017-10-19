@@ -22,6 +22,8 @@
 		BF734F9B1F9527C8004B8295 /* RecipeDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF734F9A1F9527C8004B8295 /* RecipeDetailVC.swift */; };
 		BF734FA31F95519E004B8295 /* IngredientTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF734FA11F95519E004B8295 /* IngredientTableViewCell.swift */; };
 		BF734FA41F95519E004B8295 /* IngredientTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF734FA21F95519E004B8295 /* IngredientTableViewCell.xib */; };
+		BFF06DB71F98642F00FBD767 /* NotificationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF06DB61F98642F00FBD767 /* NotificationVC.swift */; };
+		BFFCAEF31F99194B0017DFA9 /* UtilFuncs.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFCAEF21F99194B0017DFA9 /* UtilFuncs.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		BF734F9A1F9527C8004B8295 /* RecipeDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailVC.swift; sourceTree = "<group>"; };
 		BF734FA11F95519E004B8295 /* IngredientTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientTableViewCell.swift; sourceTree = "<group>"; };
 		BF734FA21F95519E004B8295 /* IngredientTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IngredientTableViewCell.xib; sourceTree = "<group>"; };
+		BFF06DB61F98642F00FBD767 /* NotificationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationVC.swift; sourceTree = "<group>"; };
+		BFFCAEF21F99194B0017DFA9 /* UtilFuncs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilFuncs.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +97,7 @@
 				BF734EA11F8BDC53004B8295 /* RecipesVC.swift */,
 				BF734EB31F8BE4BE004B8295 /* RecipesTableViewCell.swift */,
 				BF734FA11F95519E004B8295 /* IngredientTableViewCell.swift */,
+				BFF06DB61F98642F00FBD767 /* NotificationVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -122,6 +127,7 @@
 			children = (
 				BF734EB91F8C2784004B8295 /* ApiKey.swift */,
 				BF734E9F1F8BDC53004B8295 /* AppDelegate.swift */,
+				BFFCAEF21F99194B0017DFA9 /* UtilFuncs.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -206,7 +212,9 @@
 				BF734EA01F8BDC53004B8295 /* AppDelegate.swift in Sources */,
 				BF734EB41F8BE4BE004B8295 /* RecipesTableViewCell.swift in Sources */,
 				BF734EB61F8C1220004B8295 /* Recipe.swift in Sources */,
+				BFF06DB71F98642F00FBD767 /* NotificationVC.swift in Sources */,
 				BF734EBC1F8C679E004B8295 /* FillerProtocal.swift in Sources */,
+				BFFCAEF31F99194B0017DFA9 /* UtilFuncs.swift in Sources */,
 				BF734EBA1F8C2784004B8295 /* ApiKey.swift in Sources */,
 				BF734EB81F8C1F48004B8295 /* ApiCaller.swift in Sources */,
 				BF734FA31F95519E004B8295 /* IngredientTableViewCell.swift in Sources */,

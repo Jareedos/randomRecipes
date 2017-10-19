@@ -1,5 +1,6 @@
 
 import Foundation
+import UIKit
 
 class ApiCaller : fillerProtocal {
     func getRecipe(completion: @escaping (Recipe) -> Void){
@@ -32,6 +33,9 @@ class ApiCaller : fillerProtocal {
                             }
                         completion(newRecipe)
                     } catch {
+                        let alert = UIAlertController(title: "No Current Internet Connection", message: "This app requires Internet connection, Please connect to the Internet and restart the app" , preferredStyle: UIAlertControllerStyle.alert)
+                        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.cancel, handler: nil))
+                        alert.present(alert, animated: true, completion: nil)
                         fatalError("Sorry")
                     }
                     

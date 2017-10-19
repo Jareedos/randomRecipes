@@ -41,15 +41,15 @@
                             <constraint firstAttribute="height" constant="29" id="hj0-Os-LCy"/>
                         </constraints>
                     </view>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 Chicken Breast" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CMY-JY-hVy">
-                        <rect key="frame" x="73" y="9" width="142" height="22"/>
-                        <fontDescription key="fontDescription" name="Kailasa-Bold" family="Kailasa" pointSize="17"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="1 Chicken Breast" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="CMY-JY-hVy">
+                        <rect key="frame" x="48" y="9.5" width="134" height="21"/>
+                        <fontDescription key="fontDescription" name="Kailasa-Bold" family="Kailasa" pointSize="16"/>
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 Chicken Breast" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zmE-yS-inV">
-                        <rect key="frame" x="273" y="9" width="142" height="22"/>
-                        <fontDescription key="fontDescription" name="Kailasa-Bold" family="Kailasa" pointSize="17"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 Chicken Breast" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="zmE-yS-inV">
+                        <rect key="frame" x="187" y="9.5" width="228" height="21"/>
+                        <fontDescription key="fontDescription" name="Kailasa-Bold" family="Kailasa" pointSize="16"/>
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -58,13 +58,14 @@
                     <constraint firstAttribute="bottom" secondItem="mhx-K9-zi9" secondAttribute="bottom" constant="5" id="6oU-h1-uvC"/>
                     <constraint firstItem="mhx-K9-zi9" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="IXY-ty-3zt"/>
                     <constraint firstItem="mhx-K9-zi9" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="N3u-Cx-y7O"/>
-                    <constraint firstItem="CMY-JY-hVy" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="65" id="Twa-YQ-GqX"/>
+                    <constraint firstItem="CMY-JY-hVy" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="40" id="Twa-YQ-GqX"/>
                     <constraint firstItem="CMY-JY-hVy" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="ZuD-yH-uDe"/>
                     <constraint firstAttribute="trailingMargin" secondItem="zmE-yS-inV" secondAttribute="trailing" constant="8" id="alR-iO-DgD"/>
                     <constraint firstAttribute="trailing" secondItem="mhx-K9-zi9" secondAttribute="trailing" constant="5" id="lIF-2b-bzc"/>
                     <constraint firstItem="mhx-K9-zi9" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="o7m-9p-lhd"/>
                     <constraint firstItem="zmE-yS-inV" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="uj6-kB-F9r"/>
                     <constraint firstItem="mhx-K9-zi9" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="web-Ef-EO8"/>
+                    <constraint firstItem="zmE-yS-inV" firstAttribute="leading" secondItem="CMY-JY-hVy" secondAttribute="trailing" constant="5" id="xuO-Ao-eBS"/>
                     <constraint firstItem="mhx-K9-zi9" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="zIO-aY-6I9"/>
                 </constraints>
             </tableViewCellContentView>
