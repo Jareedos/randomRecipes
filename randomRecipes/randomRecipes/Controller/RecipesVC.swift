@@ -155,11 +155,6 @@ class RecipesVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
                 let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Recipes")
                 do {
                     self.recipesArray = try managedContext.fetch(fetchRequest as! NSFetchRequest<NSFetchRequestResult>) as! [NSManagedObject]
-                    
-                    for fetchedRecipe in self.recipesArray {
-                        let recipeTitle = fetchedRecipe.value(forKey: "recipeTitle") as? String
-                        print(recipeTitle)
-                    }
                 } catch let error as NSError {
                     print("Could not fetch. \(error), \(error.userInfo)")
                 }

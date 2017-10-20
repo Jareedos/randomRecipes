@@ -74,6 +74,15 @@ class RecipeDetailVC: UIViewController, UITableViewDataSource, UITableViewDelega
         self.present(myActivity, animated: true, completion: nil)
     }
     
+    @IBAction func shareButtonPressed(_ sender: Any) {
+            let url = ""
+            let myActivity = UIActivityViewController(activityItems: ["Check Out This Link From Aldo's Feedr App", url], applicationActivities: nil)
+            myActivity.popoverPresentationController?.sourceView = self.view
+            
+            self.present(myActivity, animated: true, completion: nil)
+        
+    }
+    
 
     
 }
