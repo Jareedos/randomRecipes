@@ -139,6 +139,7 @@ class RecipesVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
                 return
             }
             self.recipesArray = []
+            print(recipesArray)
             deleteRecipes()
             
             SearchApiCaller.searchRecipes(searchResult: trimmedString, completion: {
@@ -148,22 +149,17 @@ class RecipesVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
                 guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
                     return
                 }
-                
-                
                 let managedContext = appDelegate.persistentContainer.viewContext
-                
                 let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Recipes")
                 do {
                     self.recipesArray = try managedContext.fetch(fetchRequest as! NSFetchRequest<NSFetchRequestResult>) as! [NSManagedObject]
                 } catch let error as NSError {
                     print("Could not fetch. \(error), \(error.userInfo)")
                 }
-                
-                    searchBar.resignFirstResponder()
                     self.tableView.reloadData()
                 }
             })
-            //The following to run after
+          searchBar.resignFirstResponder()
             
         }
         }
@@ -188,9 +184,9 @@ class RecipesVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
         let result = try? moc.fetch(fetchRequest)
         let resultData = result as! [NSManagedObject]
         for object in resultData {
-            if object.value(forKey: "favorited") as? Bool == false {
+           // if object.value(forKey: "favorited") as? Bool == false {
                 moc.delete(object)
-            }
+            //}
         }
         do {
             try moc.save()
