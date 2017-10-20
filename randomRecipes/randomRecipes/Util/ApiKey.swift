@@ -9,3 +9,5 @@
 import Foundation
 
 let apiCall = "http://www.themealdb.com/api/json/v1/1/random.php"
+let searchApiCall = "http://www.themealdb.com/api/json/v1/1/filter.php?c="
+let lookupID = "http://www.themealdb.com/api/json/v1/1/lookup.php?i="

@@ -125,22 +125,53 @@ class RecipesVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
             let detailViewController = segue.destination as! RecipeDetailVC
             detailViewController.recipeObj = toDoItemToPass
         }
+        
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         print("Its here")
         let userInput = searchBar.text
-        if let trimmedString = stringTrimmer(stringToTrim: userInput){
+        if let trimmedString = stringTrimmer(stringToTrim: userInput) {
             if trimmedString.isEmpty {
-               let alert = UIAlertController(title: "The Search Bar is empty", message: "Please enter Text" , preferredStyle: UIAlertControllerStyle.alert)
+                let alert = UIAlertController(title: "The Search Bar is empty", message: "Please enter Text" , preferredStyle: UIAlertControllerStyle.alert)
                 alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.cancel, handler: nil))
                 self.present(alert, animated: true, completion: nil)
+                return
             }
+            self.recipesArray = []
+            deleteRecipes()
+            
+            SearchApiCaller.searchRecipes(searchResult: trimmedString, completion: {
+               
+                
+           DispatchQueue.main.async {
+                guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+                    return
+                }
+                
+                
+                let managedContext = appDelegate.persistentContainer.viewContext
+                
+                let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Recipes")
+                do {
+                    self.recipesArray = try managedContext.fetch(fetchRequest as! NSFetchRequest<NSFetchRequestResult>) as! [NSManagedObject]
+                    
+                    for fetchedRecipe in self.recipesArray {
+                        let recipeTitle = fetchedRecipe.value(forKey: "recipeTitle") as? String
+                        print(recipeTitle)
+                    }
+                } catch let error as NSError {
+                    print("Could not fetch. \(error), \(error.userInfo)")
+                }
+                
+                
+                    self.tableView.reloadData()
+                }
+            })
+            //The following to run after
+            
         }
-//        let alert = UIAlertController(title: "The Search Bar is empty", message: "Please enter Text" , preferredStyle: UIAlertControllerStyle.alert)
-//        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.cancel, handler: nil))
-//        self.present(alert, animated: true, completion: nil)
-    }
+        }
     
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         self.searchBar.showsCancelButton = true
@@ -151,11 +182,29 @@ class RecipesVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
         searchBar.text = ""
         searchBar.resignFirstResponder()
     }
+    func getContext () -> NSManagedObjectContext {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        return appDelegate.persistentContainer.viewContext
+    }
 
-    
-
-    
- 
+    func deleteRecipes() -> Void {
+        let moc = getContext()
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Recipes")
+        let result = try? moc.fetch(fetchRequest)
+        let resultData = result as! [NSManagedObject]
+        for object in resultData {
+            if object.value(forKey: "favorited") as? Bool == false {
+                moc.delete(object)
+            }
+        }
+        do {
+            try moc.save()
+        } catch let error as NSError  {
+            print("Could not save \(error), \(error.userInfo)")
+        } catch {
+            
+        }
+        
+    }
 
 }
-

@@ -24,6 +24,7 @@
 		BF734FA41F95519E004B8295 /* IngredientTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF734FA21F95519E004B8295 /* IngredientTableViewCell.xib */; };
 		BFF06DB71F98642F00FBD767 /* NotificationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF06DB61F98642F00FBD767 /* NotificationVC.swift */; };
 		BFFCAEF31F99194B0017DFA9 /* UtilFuncs.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFCAEF21F99194B0017DFA9 /* UtilFuncs.swift */; };
+		BFFCAEF91F995A870017DFA9 /* searchApiCaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFCAEF81F995A870017DFA9 /* searchApiCaller.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		BF734FA21F95519E004B8295 /* IngredientTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IngredientTableViewCell.xib; sourceTree = "<group>"; };
 		BFF06DB61F98642F00FBD767 /* NotificationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationVC.swift; sourceTree = "<group>"; };
 		BFFCAEF21F99194B0017DFA9 /* UtilFuncs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilFuncs.swift; sourceTree = "<group>"; };
+		BFFCAEF81F995A870017DFA9 /* searchApiCaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = searchApiCaller.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 				BF734EB71F8C1F48004B8295 /* ApiCaller.swift */,
 				BF734EB51F8C1220004B8295 /* Recipe.swift */,
 				BF734EBB1F8C679E004B8295 /* FillerProtocal.swift */,
+				BFFCAEF81F995A870017DFA9 /* searchApiCaller.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -213,6 +216,7 @@
 				BF734EB41F8BE4BE004B8295 /* RecipesTableViewCell.swift in Sources */,
 				BF734EB61F8C1220004B8295 /* Recipe.swift in Sources */,
 				BFF06DB71F98642F00FBD767 /* NotificationVC.swift in Sources */,
+				BFFCAEF91F995A870017DFA9 /* searchApiCaller.swift in Sources */,
 				BF734EBC1F8C679E004B8295 /* FillerProtocal.swift in Sources */,
 				BFFCAEF31F99194B0017DFA9 /* UtilFuncs.swift in Sources */,
 				BF734EBA1F8C2784004B8295 /* ApiKey.swift in Sources */,
