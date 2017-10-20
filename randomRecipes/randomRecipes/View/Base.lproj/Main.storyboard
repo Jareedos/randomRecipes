@@ -296,6 +296,9 @@
                                 <state key="normal" title="Share">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="shareBtnPressed:" destination="4X5-z3-qja" eventType="touchUpInside" id="yJz-7T-Xwb"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Owz-YL-FcL">
                                 <rect key="frame" x="10" y="279" width="302" height="150"/>
@@ -519,6 +522,12 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tEL-j7-NrS">
+                                <rect key="frame" x="90" y="286" width="140" height="31.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -531,10 +540,13 @@
                             <constraint firstItem="rgM-Mb-jfz" firstAttribute="trailing" secondItem="A4c-i7-XnZ" secondAttribute="trailing" id="Ei7-Ve-Sl7"/>
                             <constraint firstItem="rgM-Mb-jfz" firstAttribute="top" secondItem="Hoj-dG-ttj" secondAttribute="top" id="G0u-HX-u64"/>
                             <constraint firstItem="iwn-3A-4Au" firstAttribute="top" secondItem="A4c-i7-XnZ" secondAttribute="top" constant="101" id="No8-ey-SCQ"/>
+                            <constraint firstItem="A4c-i7-XnZ" firstAttribute="trailing" secondItem="tEL-j7-NrS" secondAttribute="trailing" constant="90" id="PkS-78-ScF"/>
                             <constraint firstItem="iwn-3A-4Au" firstAttribute="trailing" secondItem="A4c-i7-XnZ" secondAttribute="trailing" id="YQV-WD-dg3"/>
                             <constraint firstItem="rgM-Mb-jfz" firstAttribute="leading" secondItem="A4c-i7-XnZ" secondAttribute="leading" id="gsm-DU-iQu"/>
                             <constraint firstItem="iwn-3A-4Au" firstAttribute="leading" secondItem="A4c-i7-XnZ" secondAttribute="leading" id="mFE-Hr-t2D"/>
+                            <constraint firstItem="tEL-j7-NrS" firstAttribute="leading" secondItem="A4c-i7-XnZ" secondAttribute="leading" constant="90" id="qZD-9Y-7LT"/>
                             <constraint firstItem="rMX-bO-nHk" firstAttribute="leading" secondItem="A4c-i7-XnZ" secondAttribute="leading" id="xUR-0q-Ymk"/>
+                            <constraint firstItem="tEL-j7-NrS" firstAttribute="top" secondItem="rMX-bO-nHk" secondAttribute="bottom" constant="3" id="zqv-la-soc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="A4c-i7-XnZ"/>
                     </view>
@@ -544,7 +556,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jf7-YW-haH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-650" y="-734"/>
+            <point key="canvasLocation" x="-650.625" y="-734.15492957746483"/>
         </scene>
     </scenes>
     <resources>

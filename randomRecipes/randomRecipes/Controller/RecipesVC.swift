@@ -164,7 +164,7 @@ class RecipesVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
                     print("Could not fetch. \(error), \(error.userInfo)")
                 }
                 
-                
+                    searchBar.resignFirstResponder()
                     self.tableView.reloadData()
                 }
             })

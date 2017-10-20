@@ -65,6 +65,14 @@ class RecipeDetailVC: UIViewController, UITableViewDataSource, UITableViewDelega
         cell.IngredientLbl.text = IngANDMeasurementsArray[indexPath.row].1
         return cell
     }
+
+    @IBAction func shareBtnPressed(_ sender: Any) {
+        let url = ""
+        let myActivity = UIActivityViewController(activityItems: ["Check Out This Link From Aldo's Feedr App", url], applicationActivities: nil)
+        myActivity.popoverPresentationController?.sourceView = self.view
+        
+        self.present(myActivity, animated: true, completion: nil)
+    }
     
 
     
