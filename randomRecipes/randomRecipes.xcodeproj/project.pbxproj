@@ -22,6 +22,7 @@
 		BF734F9B1F9527C8004B8295 /* RecipeDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF734F9A1F9527C8004B8295 /* RecipeDetailVC.swift */; };
 		BF734FA31F95519E004B8295 /* IngredientTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF734FA11F95519E004B8295 /* IngredientTableViewCell.swift */; };
 		BF734FA41F95519E004B8295 /* IngredientTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF734FA21F95519E004B8295 /* IngredientTableViewCell.xib */; };
+		BFE995C31F9A57D500C365F6 /* networkCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE995C21F9A57D500C365F6 /* networkCheck.swift */; };
 		BFF06DB71F98642F00FBD767 /* NotificationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF06DB61F98642F00FBD767 /* NotificationVC.swift */; };
 		BFFCAEF31F99194B0017DFA9 /* UtilFuncs.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFCAEF21F99194B0017DFA9 /* UtilFuncs.swift */; };
 		BFFCAEF91F995A870017DFA9 /* searchApiCaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFCAEF81F995A870017DFA9 /* searchApiCaller.swift */; };
@@ -45,6 +46,7 @@
 		BF734F9A1F9527C8004B8295 /* RecipeDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailVC.swift; sourceTree = "<group>"; };
 		BF734FA11F95519E004B8295 /* IngredientTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientTableViewCell.swift; sourceTree = "<group>"; };
 		BF734FA21F95519E004B8295 /* IngredientTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IngredientTableViewCell.xib; sourceTree = "<group>"; };
+		BFE995C21F9A57D500C365F6 /* networkCheck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = networkCheck.swift; sourceTree = "<group>"; };
 		BFF06DB61F98642F00FBD767 /* NotificationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationVC.swift; sourceTree = "<group>"; };
 		BFFCAEF21F99194B0017DFA9 /* UtilFuncs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilFuncs.swift; sourceTree = "<group>"; };
 		BFFCAEF81F995A870017DFA9 /* searchApiCaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = searchApiCaller.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 				BF734EB51F8C1220004B8295 /* Recipe.swift */,
 				BF734EBB1F8C679E004B8295 /* FillerProtocal.swift */,
 				BFFCAEF81F995A870017DFA9 /* searchApiCaller.swift */,
+				BFE995C21F9A57D500C365F6 /* networkCheck.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -219,6 +222,7 @@
 				BFFCAEF91F995A870017DFA9 /* searchApiCaller.swift in Sources */,
 				BF734EBC1F8C679E004B8295 /* FillerProtocal.swift in Sources */,
 				BFFCAEF31F99194B0017DFA9 /* UtilFuncs.swift in Sources */,
+				BFE995C31F9A57D500C365F6 /* networkCheck.swift in Sources */,
 				BF734EBA1F8C2784004B8295 /* ApiKey.swift in Sources */,
 				BF734EB81F8C1F48004B8295 /* ApiCaller.swift in Sources */,
 				BF734FA31F95519E004B8295 /* IngredientTableViewCell.swift in Sources */,

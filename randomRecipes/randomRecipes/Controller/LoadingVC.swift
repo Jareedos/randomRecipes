@@ -10,6 +10,13 @@ class LoadingVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if ConnectionCheck.isConnectedToNetwork() {
+            print("we are good")
+        } else {
+            let alert = UIAlertController(title: "The Search Bar is empty", message: "Please enter Text" , preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.cancel, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
 
     }
 
